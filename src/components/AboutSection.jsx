@@ -1,7 +1,38 @@
 import React from "react";
 import { Calendar } from "lucide-react";
 
-const AboutSection = ({ personalInfo, experience }) => {
+const personalInfo = {
+  name: "Piyush",
+  title: "Software Engineer",
+  bio: "Full-stack web developer with a passion for building robust, scalable applications from the ground up. Proficient in React, Node.js, and modern web architecture, I bring a user-first mindset to every line of code—balancing elegant frontend design with rock-solid backend performance.",
+  email: "jhapiyush5802@gmail.com",
+  location: "Gurugram, India",
+  yearsExperience: "5",
+  projectsCompleted: "54",
+  clientsSatisfied: "4",
+};
+const experience = [
+  {
+    position: "Trainee Software Developer",
+    company: "Tech Superior Consulting",
+    duration: "April 2025 – Present",
+    description: [
+      "Developed and optimized responsive user interfaces using React, TypeScript, and Tailwind CSS, ensuring seamless performance across devices.",
+      "Integrated dynamic forms with Zod for type-safe, high-performance validation and improved user experience.",
+      "Collaborated within an Agile Scrum team to ship scalable, reusable components, modals, and API-integrated features with rapid iteration cycles.",
+      "Enhanced frontend-backend connectivity, streamlining data flow and significantly boosting app responsiveness and stability.",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Zod",
+      "REST APIs",
+    ],
+  },
+];
+function AboutSection() {
   return (
     <section
       id="about"
@@ -89,7 +120,7 @@ const AboutSection = ({ personalInfo, experience }) => {
                 key={index}
                 className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {job.position}
@@ -103,9 +134,11 @@ const AboutSection = ({ personalInfo, experience }) => {
                     {job.duration}
                   </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {job.description}
-                </p>
+                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-4 space-y-1">
+                  {job.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2">
                   {job.technologies.map((tech, techIndex) => (
                     <span
@@ -123,6 +156,6 @@ const AboutSection = ({ personalInfo, experience }) => {
       </div>
     </section>
   );
-};
+}
 
 export default AboutSection;

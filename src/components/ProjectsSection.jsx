@@ -1,14 +1,73 @@
 import React from "react";
 import { ExternalLink, Github, Star } from "lucide-react";
 
-const ProjectsSection = ({ projects }) => {
-  const projectImages = {
-    1: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&auto=format&q=80",
-    2: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop&auto=format&q=80",
-    3: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop&auto=format&q=80",
-    4: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format&q=80",
-  };
+const projects = [
+  {
+    id: "1",
+    title: "RentWise",
+    description:
+      "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    image: "projects/rentWise.png",
+    liveUrl: "https://your-portfolio-site.com",
+    githubUrl: "https://github.com/your-username/portfolio-site",
+    featured: true,
+  },
+  {
+    id: "2",
+    title: "E-Commerce",
+    description:
+      "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite",
+      "Mongo DB",
+      "Node JS",
+      "Express JS",
+    ],
+    image: "/projects/ecommerce.png",
+    liveUrl: "https://eshopify-demo.com",
+    githubUrl: "https://github.com/your-username/ecommerce-app",
+    featured: true,
+  },
+  {
+    id: "3",
+    title: "Personal Porfolio",
+    description:
+      "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    image: "/projects/personalPortfolio.png",
+    liveUrl: "https://eshopify-demo.com",
+    githubUrl: "https://github.com/your-username/ecommerce-app",
+    featured: true,
+  },
+  {
+    id: "4",
+    title: "chatEase",
+    description:
+      "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    image: "/projects/chatEase.png",
+    liveUrl: "https://eshopify-demo.com",
+    githubUrl: "https://github.com/your-username/ecommerce-app",
+    featured: true,
+  },
+  // {
+  //   id: "4",
+  //   title: "TaskMaster Pro",
+  //   description:
+  //     "A productivity app for creating and managing tasks with drag-and-drop functionality, real-time collaboration, and user authentication.",
+  //   technologies: ["Next.js", "Firebase", "Tailwind CSS", "DndKit"],
+  //   image: "/images/taskmaster.png",
+  //   liveUrl: "https://taskmaster-pro.app",
+  //   githubUrl: "https://github.com/your-username/taskmaster-pro",
+  //   featured: false,
+  // },
+];
 
+function ProjectsSection() {
   return (
     <section
       id="projects"
@@ -118,6 +177,6 @@ const ProjectsSection = ({ projects }) => {
       </div>
     </section>
   );
-};
+}
 
 export default ProjectsSection;

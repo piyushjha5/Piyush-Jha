@@ -9,7 +9,18 @@ import {
   MessageSquare,
 } from "lucide-react";
 
-const ContactSection = ({ personalInfo }) => {
+const personalInfo = {
+  name: "Piyush",
+  title: "Software Engineer",
+  bio: "Full-stack web developer with a passion for building robust, scalable applications from the ground up. Proficient in React, Node.js, and modern web architecture, I bring a user-first mindset to every line of code—balancing elegant frontend design with rock-solid backend performance.",
+  email: "jhapiyush5802@gmail.com",
+  location: "Gurugram, India",
+  yearsExperience: "5",
+  projectsCompleted: "54",
+  clientsSatisfied: "4",
+};
+
+function ContactSection() {
   const [formData, setFormData] = useState({
     name: "Piyush Jha",
     email: "jhapiyush5802@gmail.com",
@@ -210,6 +221,6 @@ const ContactSection = ({ personalInfo }) => {
       </div>
     </section>
   );
-};
+}
 
 export default ContactSection;

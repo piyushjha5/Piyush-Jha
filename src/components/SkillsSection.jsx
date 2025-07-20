@@ -1,7 +1,22 @@
 import React, { useState } from "react";
 import { Code, Zap, Palette } from "lucide-react";
 
-const SkillsSection = ({ skills }) => {
+const skills = [
+  "Java",
+  "DSA",
+  "OOPs",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Javascript",
+  "Node.js",
+  "MongoDB",
+  "Git",
+  "Github",
+  "Docker",
+];
+
+function SkillsSection() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   // Skill logos mapping
@@ -287,6 +302,6 @@ const SkillsSection = ({ skills }) => {
       </div>
     </section>
   );
-};
+}
 
 export default SkillsSection;
