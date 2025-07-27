@@ -3,17 +3,26 @@ import { Code, Zap, Palette } from "lucide-react";
 
 const skills = [
   "Java",
-  "DSA",
-  "OOPs",
   "React",
   "Next.js",
-  "TypeScript",
-  "Javascript",
   "Node.js",
-  "MongoDB",
+  "Express.js",
   "Git",
-  "Github",
-  "Docker",
+  "GitHub",
+  "Tailwind CSS",
+  "Data Structures",
+  "OOPs",
+  "PHP",
+  "MySQL",
+  "MongoDB",
+  "TypeScript",
+  "JavaScript",
+  "MongoDB",
+  "HTML5",
+  "CSS3",
+  "Bootstrap",
+  "Vite",
+  "VS Code",
 ];
 
 function SkillsSection() {
@@ -21,6 +30,14 @@ function SkillsSection() {
 
   // Skill logos mapping
   const skillLogos = {
+    "Data Structures":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
+    DSA: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
+    Algorithms:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
+    "Object-Oriented Programming":
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/objectivec/objectivec-plain.svg",
+    OOPs: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/objectivec/objectivec-plain.svg",
     // Frontend
     React:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -35,8 +52,8 @@ function SkillsSection() {
     HTML5:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     CSS3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    "Tailwind CSS":
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    // "Tailwind CSS":
+    //   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     Bootstrap:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",

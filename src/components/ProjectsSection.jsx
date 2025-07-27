@@ -9,15 +9,15 @@ const projects = [
       "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     image: "projects/rentWise.png",
-    liveUrl: "https://your-portfolio-site.com",
-    githubUrl: "https://github.com/your-username/portfolio-site",
+    liveUrl: "https://rentwise.42web.io/?i=2",
+    githubUrl: "https://github.com/piyushjha5/rentWise",
     featured: true,
   },
   {
     id: "2",
-    title: "E-Commerce",
+    title: "Under Development E-commerce Platform",
     description:
-      "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+      "Currently under development, this e-commerce platform will feature a modern design, user authentication, product management, and a secure payment gateway.",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -28,9 +28,9 @@ const projects = [
       "Express JS",
     ],
     image: "/projects/ecommerce.png",
-    liveUrl: "https://eshopify-demo.com",
-    githubUrl: "https://github.com/your-username/ecommerce-app",
-    featured: true,
+    liveUrl: "",
+    githubUrl: "https://github.com/piyushjha5/e-Commerce",
+    featured: false,
   },
   {
     id: "3",
@@ -40,8 +40,8 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     image: "/projects/personalPortfolio.png",
     liveUrl: "https://eshopify-demo.com",
-    githubUrl: "https://github.com/your-username/ecommerce-app",
-    featured: true,
+    githubUrl: "https://github.com/piyushjha5/portfolio",
+    featured: false,
   },
   {
     id: "4",
@@ -50,9 +50,9 @@ const projects = [
       "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     image: "/projects/chatEase.png",
-    liveUrl: "https://eshopify-demo.com",
-    githubUrl: "https://github.com/your-username/ecommerce-app",
-    featured: true,
+    liveUrl: "https://piyushjha5.github.io/ChatEase/",
+    githubUrl: "https://github.com/piyushjha5/ChatEase",
+    featured: false,
   },
   // {
   //   id: "4",
@@ -131,18 +131,22 @@ function ProjectsSection() {
 
                 {/* Project Links */}
                 <div className="flex space-x-4">
-                  <a
-                    href={project.liveUrl}
-                    className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 group/link"
-                  >
-                    <ExternalLink
-                      size={16}
-                      className="mr-2 group-hover/link:translate-x-1 transition-transform duration-200"
-                    />
-                    Live Demo
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 group/link"
+                    >
+                      <ExternalLink
+                        size={16}
+                        className="mr-2 group-hover/link:translate-x-1 transition-transform duration-200"
+                      />
+                      Live Demo
+                    </a>
+                  )}
                   <a
                     href={project.githubUrl}
+                    target="_blank"
                     className="flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 group/link"
                   >
                     <Github
@@ -160,7 +164,8 @@ function ProjectsSection() {
         {/* View All Projects Link */}
         <div className="text-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/piyushjha5?tab=repositories"
+            target="_blank"
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-lg group transition-all duration-300"
           >
             <Github

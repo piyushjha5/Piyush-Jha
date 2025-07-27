@@ -66,33 +66,12 @@ function HeroSection() {
               </button>
 
               <a
-                href="#"
+                href="/resume.pdf"
+                target="_blank"
                 className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-gray-900 hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
               >
                 <Download size={20} className="group-hover:animate-bounce" />
                 Download Resume
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-6 mb-8">
-              <a
-                href="https://github.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="https://twitter.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-              >
-                <Twitter size={24} />
               </a>
             </div>
           </div>
@@ -103,7 +82,7 @@ function HeroSection() {
               <img
                 src="/hero.png"
                 alt={personalInfo?.name || "Profile"}
-                className="w-80 h-80 lg:w-132 lg:h-132 rounded-full border-4 border-white dark:border-gray-700 shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="w-96 h-96 lg:w-124 lg:h-124 rounded-full border-4 border-white dark:border-gray-700 shadow-xl transform hover:scale-105 transition-all duration-300"
               />
               {/* Decorative background circle */}
               <div

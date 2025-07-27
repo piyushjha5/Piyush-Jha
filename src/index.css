@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+/* Configure dark mode using custom variant */
+@variant dark (.dark &);
+
+/* Smooth popup animation without flickering */
+@keyframes popup-enter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.animate-popup {
+  animation: popup-enter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, 0); /* Ensure consistent final position */
+}
+
+/* Progress bar animations remain the same */
+@keyframes shrinkProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.progress-success {
+  animation: shrinkProgress 5s linear forwards;
+}
+
+.progress-error {
+  animation: shrinkProgress 8s linear forwards;
+}

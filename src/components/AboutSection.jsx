@@ -11,6 +11,31 @@ const personalInfo = {
   projectsCompleted: "54",
   clientsSatisfied: "4",
 };
+const education = [
+  {
+    degree: "Bachelor of Technology in Computer Science",
+    institution: "Dev Bhoomi Uttarakhand University",
+    year: "2021 - 2025",
+    description: "Specialized in software engineering, data structures.",
+    icon: "🎓",
+  },
+  {
+    degree: "Higher Secondary Education",
+    institution: "Don Bosco Convent School",
+    year: "2018 - 2020",
+    description: "Science stream with PCM.",
+    icon: "📚",
+  },
+  // {
+  //   degree: "Secondary Education",
+  //   institution: "Your School Name",
+  //   year: "2014 - 2016",
+  //   description:
+  //     "Completed secondary education with excellent academic performance.",
+  //   icon: "🏫",
+  // },
+];
+
 const experience = [
   {
     position: "Trainee Software Developer",
@@ -51,62 +76,98 @@ function AboutSection() {
         </div>
 
         {/* Main Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
           {/* Text Content */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               My Journey
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              With over {personalInfo.yearsExperience} years of experience in
-              software development, I've had the privilege of working with
-              amazing teams and building products that impact thousands of
-              users.
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              As a recent Computer Science graduate, I'm excited to begin my
+              professional journey in software development. Through academic
+              projects, internships, and personal coding challenges, I've
+              developed strong skills in building modern web applications that
+              prioritize user experience and clean code architecture.
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              I specialize in full-stack development with a focus on creating
-              scalable, maintainable, and user-friendly applications. I'm
-              constantly learning and staying up-to-date with the latest
-              technologies and best practices.
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              What drives me is the opportunity to learn, grow, and contribute
+              to meaningful projects. I'm passionate about writing maintainable
+              code, collaborating with experienced teams, and continuously
+              expanding my technical skills to solve real-world problems.
             </p>
+          </div>
 
-            {/* Stats */}
-            {/* <div className="grid grid-cols-3 gap-4 text-center mt-8">
-              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  {personalInfo.yearsExperience}+
+          {/* Education Timeline */}
+          {/* <div>
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Education
+              </h3>
+            </div>
+            <div className="space-y-4">
+              {education.map((edu, index) => (
+                <div
+                  key={index}
+                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        {edu.degree}
+                      </h4>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium">
+                        {edu.institution}
+                      </p>
+                    </div>
+                    <div className="ml-4 shrink-0">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {edu.year}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Years Experience
+              ))}
+            </div>
+          </div> */}
+          {/* Education Timeline - Minimal */}
+          <div>
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Education
+              </h3>
+            </div>
+
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  {/* Timeline dot */}
+                  <div className="w-3 h-3 bg-blue-600 rounded-full flex-shrink-0"></div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-blue-600 dark:text-blue-400 font-medium">
+                      {edu.institution}
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      {edu.year}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                  {personalInfo.projectsCompleted}+
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Projects Completed
-                </div>
-              </div>
-              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg transform hover:scale-105 transition-all duration-300">
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                  {personalInfo.clientsSatisfied}+
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Happy Clients
-                </div>
-              </div>
-            </div> */}
+              ))}
+            </div>
           </div>
 
           {/* Image */}
-          <div className="order-first md:order-last">
+          {/* <div className="order-first md:order-last">
             <img
               src="/photo.jpg"
               alt="About me"
               className="rounded-lg h-96 w-full shadow-lg transform hover:scale-105 transition-all duration-300"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Experience Section */}
