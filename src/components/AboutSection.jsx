@@ -82,7 +82,7 @@ function AboutSection() {
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               My Journey
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            {/* <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               As a recent Computer Science graduate, I'm excited to begin my
               professional journey in software development. Through academic
               projects, internships, and personal coding challenges, I've
@@ -94,6 +94,15 @@ function AboutSection() {
               to meaningful projects. I'm passionate about writing maintainable
               code, collaborating with experienced teams, and continuously
               expanding my technical skills to solve real-world problems.
+            </p> */}
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Recent Computer Science graduate with hands-on experience in
+              developing modern web applications that prioritize user
+              experience, performance, and clean architecture. Skilled in
+              front-end development and passionate about writing maintainable
+              code, solving real-world problems, and continuously learning.
+              Motivated by collaboration, innovation, and the opportunity to
+              contribute to meaningful projects that make a lasting impact.
             </p>
           </div>
 
@@ -140,10 +149,8 @@ function AboutSection() {
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <div key={index} className="flex items-center space-x-4">
-                  {/* Timeline dot */}
                   <div className="w-3 h-3 bg-blue-600 rounded-full flex-shrink-0"></div>
 
-                  {/* Content */}
                   <div className="flex-1">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {edu.degree}
