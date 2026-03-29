@@ -1,62 +1,6 @@
 import React from "react";
 import { Calendar } from "lucide-react";
-
-const personalInfo = {
-  name: "Piyush",
-  title: "Software Engineer",
-  bio: "Full-stack web developer with a passion for building robust, scalable applications from the ground up. Proficient in React, Node.js, and modern web architecture, I bring a user-first mindset to every line of code—balancing elegant frontend design with rock-solid backend performance.",
-  email: "jhapiyush5802@gmail.com",
-  location: "Gurugram, India",
-  yearsExperience: "5",
-  projectsCompleted: "54",
-  clientsSatisfied: "4",
-};
-const education = [
-  {
-    degree: "Bachelor of Technology in Computer Science",
-    institution: "Dev Bhoomi Uttarakhand University",
-    year: "2021 - 2025",
-    description: "Specialized in software engineering, data structures.",
-    icon: "🎓",
-  },
-  {
-    degree: "Higher Secondary Education",
-    institution: "Don Bosco Convent School",
-    year: "2018 - 2020",
-    description: "Science stream with PCM.",
-    icon: "📚",
-  },
-  // {
-  //   degree: "Secondary Education",
-  //   institution: "Your School Name",
-  //   year: "2014 - 2016",
-  //   description:
-  //     "Completed secondary education with excellent academic performance.",
-  //   icon: "🏫",
-  // },
-];
-
-const experience = [
-  {
-    position: "Trainee Software Developer",
-    company: "Tech Superior Consulting",
-    duration: "April 2025 – Present",
-    description: [
-      "Developed and optimized responsive user interfaces using React, TypeScript, and Tailwind CSS, ensuring seamless performance across devices.",
-      "Integrated dynamic forms with Zod for type-safe, high-performance validation and improved user experience.",
-      "Collaborated within an Agile Scrum team to ship scalable, reusable components, modals, and API-integrated features with rapid iteration cycles.",
-      "Enhanced frontend-backend connectivity, streamlining data flow and significantly boosting app responsiveness and stability.",
-    ],
-    technologies: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "Zod",
-      "REST APIs",
-    ],
-  },
-];
+import { personalInfo, education, experience } from "../data/portfolio";
 function AboutSection() {
   return (
     <section

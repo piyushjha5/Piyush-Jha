@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 // import { useTheme } from "./ThemeContext";
 import { useTheme } from "./ThemeProvider";
+import { personalInfo } from "../data/portfolio";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -50,7 +51,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Piyush
+              {personalInfo.name}
             </div>
           </div>
 

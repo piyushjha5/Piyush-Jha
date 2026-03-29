@@ -7,17 +7,7 @@ import {
   Twitter,
   ChevronDown,
 } from "lucide-react";
-
-const personalInfo = {
-  name: "Piyush",
-  title: "Software Engineer",
-  bio: "Full-stack web developer with a passion for building robust, scalable applications from the ground up. Proficient in React, Node.js, and modern web architecture, I bring a user-first mindset to every line of code—balancing elegant frontend design with rock-solid backend performance.",
-  email: "jhapiyush5802@gmail.com",
-  location: "Gurugram, India",
-  yearsExperience: "5",
-  projectsCompleted: "54",
-  clientsSatisfied: "4",
-};
+import { personalInfo } from "../data/portfolio";
 
 function HeroSection() {
   const scrollToSection = (sectionId) => {
@@ -66,7 +56,7 @@ function HeroSection() {
               </button>
 
               <a
-                href="/resume.pdf"
+                href="/piyush_jha.pdf"
                 target="_blank"
                 className="border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-gray-900 hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
               >
