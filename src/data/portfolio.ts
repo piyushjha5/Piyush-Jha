@@ -1,4 +1,13 @@
-export const personalInfo = {
+import { 
+  PersonalInfo, 
+  Education, 
+  Experience, 
+  Project, 
+  SocialLink, 
+  SkillLogos 
+} from "../types";
+
+export const personalInfo: PersonalInfo = {
   name: "Piyush",
   title: "Software Engineer",
   bio: "Full-stack web developer with a passion for building robust, scalable applications from the ground up. Proficient in React, Node.js, and modern web architecture, I bring a user-first mindset to every line of code—balancing elegant frontend design with rock-solid backend performance.",
@@ -9,7 +18,7 @@ export const personalInfo = {
   clientsSatisfied: "4",
 };
 
-export const education = [
+export const education: Education[] = [
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "Dev Bhoomi Uttarakhand University",
@@ -26,7 +35,7 @@ export const education = [
   },
 ];
 
-export const experience = [
+export const experience: Experience[] = [
   {
     position: "Software Developer",
     company: "Tech Superior Consulting",
@@ -48,7 +57,7 @@ export const experience = [
   },
 ];
 
-export const skills = [
+export const skills: string[] = [
   "Java",
   "React",
   "Next.js",
@@ -71,7 +80,7 @@ export const skills = [
   "VS Code",
 ];
 
-export const skillLogos = {
+export const skillLogos: SkillLogos = {
   "Data Structures": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
   DSA: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
   Algorithms: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/algolia/algolia-original.svg",
@@ -137,12 +146,73 @@ export const skillLogos = {
   Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
 };
 
-export const projects = [
+// export const projects: Project[] = [
+//   {
+//     id: "1",
+//     title: "RentWise",
+//     description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+//     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+//     image: "projects/rentWise.png",
+//     liveUrl: "https://rentwise.42web.io/?i=2",
+//     githubUrl: "https://github.com/piyushjha5/rentWise",
+//     featured: true,
+//   },
+//   {
+//     id: "2",
+//     title: "Under Development E-commerce Platform",
+//     description: "Currently under development, this e-commerce platform will feature a modern design, user authentication, product management, and a secure payment gateway.",
+//     technologies: [
+//       "React",
+//       "Tailwind CSS",
+//       "Framer Motion",
+//       "Vite",
+//       "Mongo DB",
+//       "Node JS",
+//       "Express JS",
+//     ],
+//     image: "/projects/ecommerce.png",
+//     liveUrl: "",
+//     githubUrl: "https://github.com/piyushjha5/e-Commerce",
+//     featured: false,
+//   },
+//   {
+//     id: "3",
+//     title: "Personal Porfolio",
+//     description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+//     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+//     image: "/projects/personalPortfolio.png",
+//     liveUrl: "https://eshopify-demo.com",
+//     githubUrl: "https://github.com/piyushjha5/portfolio",
+//     featured: false,
+//   },
+//   {
+//     id: "4",
+//     title: "chatEase",
+//     description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
+//     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+//     image: "/projects/chatEase.png",
+//     liveUrl: "https://piyushjha5.github.io/ChatEase/",
+//     githubUrl: "https://github.com/piyushjha5/ChatEase",
+//     featured: false,
+//   },
+// ];
+
+export const projects: Project[] = [
   {
     id: "1",
-    title: "RentWise",
-    description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    title: "RentWise-Rental Property Platform",
+    type: "Personal Project",
+    description:
+      "A full-stack rental property platform enabling users to discover, filter, and shortlist properties while allowing owners to manage listings. Features role-based authentication, dynamic filtering, and server-side pagination.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Tailwind CSS",
+    ],
     image: "projects/rentWise.png",
     liveUrl: "https://rentwise.42web.io/?i=2",
     githubUrl: "https://github.com/piyushjha5/rentWise",
@@ -150,37 +220,49 @@ export const projects = [
   },
   {
     id: "2",
-    title: "Under Development E-commerce Platform",
-    description: "Currently under development, this e-commerce platform will feature a modern design, user authentication, product management, and a secure payment gateway.",
+    title: "CollectivWork-HRMS",
+    type: "Production Project",
+    description:
+      "A production-level HR management system for handling employee data, attendance tracking, and leave workflows. Built scalable APIs and implemented workflow-based logic with optimized database queries.",
     technologies: [
       "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
       "Tailwind CSS",
-      "Framer Motion",
-      "Vite",
-      "Mongo DB",
-      "Node JS",
-      "Express JS",
     ],
-    image: "/projects/ecommerce.png",
+    image: "/projects/collectivWork.png",
     liveUrl: "",
-    githubUrl: "https://github.com/piyushjha5/e-Commerce",
-    featured: false,
+    githubUrl: "",
+    featured: true,
   },
   {
     id: "3",
-    title: "Personal Porfolio",
-    description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    image: "/projects/personalPortfolio.png",
-    liveUrl: "https://eshopify-demo.com",
-    githubUrl: "https://github.com/piyushjha5/portfolio",
+    title: "Dhart-E Factory Manufacturing Management System",
+    type: "Production Project",
+    description:
+      "Developed a factory manufacturing management system for handling production, inventory, and vendor management. Built scalable APIs and implemented workflow-based logic with optimized database queries.",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+      "TypeScript",
+    ],
+    image: "/projects/dhartE.png",
+    liveUrl: "",
+    githubUrl: "",
     featured: false,
   },
   {
     id: "4",
-    title: "chatEase",
-    description: "A sleek and fully responsive portfolio website built to showcase my skills, experience, and projects. Features dark mode, animations, and interactive sections.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    title: "ChatEase",
+    type: "Personal Project",
+    description:
+      "A real-time chat application with a responsive UI, enabling seamless communication between users. Focused on frontend performance, component reusability, and clean UI design.",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
     image: "/projects/chatEase.png",
     liveUrl: "https://piyushjha5.github.io/ChatEase/",
     githubUrl: "https://github.com/piyushjha5/ChatEase",
@@ -188,7 +270,7 @@ export const projects = [
   },
 ];
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     platform: "GitHub",
     url: "https://github.com/piyushjha5",

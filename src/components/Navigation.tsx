@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
-// import { useTheme } from "./ThemeContext";
 import { useTheme } from "./ThemeProvider";
 import { personalInfo } from "../data/portfolio";
 
-const Navigation = () => {
-  const [activeSection, setActiveSection] = useState("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navigation: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       const sections = ["home", "about", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
@@ -34,7 +33,7 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

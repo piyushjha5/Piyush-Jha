@@ -2,7 +2,7 @@ import React from "react";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { socialLinks } from "../data/portfolio";
 
-const StickySocialLinks = () => {
+const StickySocialLinks: React.FC = () => {
   return (
     <div className="fixed bottom-6 left-4 sm:left-6 lg:left-8 z-50 flex space-x-4 lg:pl-14">
       {socialLinks.map((link) => {

@@ -1,7 +1,8 @@
 import React from "react";
 import { Calendar } from "lucide-react";
-import { personalInfo, education, experience } from "../data/portfolio";
-function AboutSection() {
+import { education, experience } from "../data/portfolio";
+
+const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
@@ -26,19 +27,6 @@ function AboutSection() {
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               My Journey
             </h3>
-            {/* <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              As a recent Computer Science graduate, I'm excited to begin my
-              professional journey in software development. Through academic
-              projects, internships, and personal coding challenges, I've
-              developed strong skills in building modern web applications that
-              prioritize user experience and clean code architecture.
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              What drives me is the opportunity to learn, grow, and contribute
-              to meaningful projects. I'm passionate about writing maintainable
-              code, collaborating with experienced teams, and continuously
-              expanding my technical skills to solve real-world problems.
-            </p> */}
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               Recent Computer Science graduate with hands-on experience in
               developing modern web applications that prioritize user
@@ -50,38 +38,6 @@ function AboutSection() {
             </p>
           </div>
 
-          {/* Education Timeline */}
-          {/* <div>
-            <div className="mb-8">
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Education
-              </h3>
-            </div>
-            <div className="space-y-4">
-              {education.map((edu, index) => (
-                <div
-                  key={index}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700"
-                >
-                  <div className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium">
-                        {edu.institution}
-                      </p>
-                    </div>
-                    <div className="ml-4 shrink-0">
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {edu.year}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
           {/* Education Timeline - Minimal */}
           <div>
             <div className="mb-8">
@@ -110,15 +66,6 @@ function AboutSection() {
               ))}
             </div>
           </div>
-
-          {/* Image */}
-          {/* <div className="order-first md:order-last">
-            <img
-              src="/photo.jpg"
-              alt="About me"
-              className="rounded-lg h-96 w-full shadow-lg transform hover:scale-105 transition-all duration-300"
-            />
-          </div> */}
         </div>
 
         {/* Experience Section */}

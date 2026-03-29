@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Code, Zap, Palette } from "lucide-react";
 import { skills, skillLogos } from "../data/portfolio";
 
-function SkillsSection() {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
+const SkillsSection: React.FC = () => {
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const handleImageError = (e) => {
-    e.target.style.display = "none";
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    (e.target as HTMLImageElement).style.display = "none";
   };
 
   return (
@@ -60,66 +60,6 @@ function SkillsSection() {
             ))}
           </div>
         </div>
-
-        {/* Skill Highlights */}
-        {/* <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            What I'm Currently Learning
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg hover:scale-105 transition-transform duration-300 group border border-blue-200 dark:border-blue-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                  alt="Next.js logo"
-                  className="w-8 h-8 filter brightness-0 invert"
-                  onError={handleImageError}
-                />
-              </div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                Next.js 14
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Exploring the latest features and App Router
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg hover:scale-105 transition-transform duration-300 group border border-purple-200 dark:border-purple-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
-                  alt="Rust logo"
-                  className="w-8 h-8 filter brightness-0 invert"
-                  onError={handleImageError}
-                />
-              </div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                WebAssembly
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                High-performance web applications
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg hover:scale-105 transition-transform duration-300 group border border-green-200 dark:border-green-800">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
-                  alt="Three.js logo"
-                  className="w-8 h-8 filter brightness-0 invert"
-                  onError={handleImageError}
-                />
-              </div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                Three.js
-              </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                3D graphics and interactive experiences
-              </p>
-            </div>
-          </div>
-        </div> */}
 
         {/* Additional Skills Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white">

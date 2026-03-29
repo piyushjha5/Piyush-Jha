@@ -2,15 +2,12 @@ import React from "react";
 import {
   Mail,
   Download,
-  Github,
-  Linkedin,
-  Twitter,
   ChevronDown,
 } from "lucide-react";
 import { personalInfo } from "../data/portfolio";
 
-function HeroSection() {
-  const scrollToSection = (sectionId) => {
+const HeroSection: React.FC = () => {
+  const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
